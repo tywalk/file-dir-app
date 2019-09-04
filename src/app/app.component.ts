@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'file-dir-app';
+  title = 'Your Virtual File Dirctory';
 }

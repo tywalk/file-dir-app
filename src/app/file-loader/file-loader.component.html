@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <h3>Select files</h3>
+            <div ng2FileDrop
+                 [ngClass]="{'nv-file-over': hasBaseDropZoneOver}"
+                 (fileOver)="fileOverBase($event)"
+                 [uploader]="uploader"
+                 (onFileDrop)="onDrop($event)"
+                 class="well my-drop-zone">
+                Base drop zone
+            </div>
+            <input type="file" ng2FileSelect [uploader]="uploader" (onFileSelected)="onDrop($event)" multiple /><br />
+        </div>
+        <div class="col-md-3" style="margin-bottom: 40px">
+            <tree-root #tree [state]="state" [options]="options" [focused]="true" [nodes]="nodes"></tree-root>
+            <button class="btn btn-light mr-4" (click)="zipItUp()" *ngIf="tree.treeModel.selectedLeafNodes.length">Zip</button>
+            <button class="btn btn-light" (click)="unZip()" *ngIf="tree.treeModel.selectedLeafNodes.length">UnZip</button>
+        </div>
+        <div class="col-md-6">
+            <label class="control-label">File Text</label>
+            <textarea ([ngModel])="selectedText" class="form-control">{{selectedText}}</textarea>
+        </div>
+    <div>
+</div>

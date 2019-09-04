@@ -1,0 +1,15 @@
+.my-drop-zone {
+    border: dotted 3px lightgray;
+    height: 200px;
+    background-color: aliceblue;
+    padding: 10px;
+    color: gray;
+}
+
+.nv-file-over {
+    border: dotted 3px green;
+}
+
+html, body {
+    height: 100%;
+}
